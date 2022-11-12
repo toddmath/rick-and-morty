@@ -18,7 +18,9 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true,
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",

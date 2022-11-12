@@ -5,7 +5,7 @@ import { getCharacters } from "rickmortyapi"
 import clsx from "clsx"
 import Link from "next/link"
 
-import { Pagination } from "../../components/Pagination"
+// import { Pagination } from "../../components/Pagination"
 import { makeQueryClient } from "../../utils/query-client"
 
 // const queryClient: QueryClient = new Map()
@@ -40,29 +40,29 @@ export default function Chars() {
   } = use(queryClient(page, () => getCharacters({ page })))
 
   return (
-    <article className='space-y-20 w-full'>
-      <ul className='w-full grid grid-cols-[repeat(auto-fit,minmax(min(100%,30ch),1fr))] gap-6 list-none'>
-        {chars?.map(char => (
-          <li key={char.id} className={clsx("w-full card card-bordered shadow-xl")}>
-            <div className='card-body'>
-              <h2 className='card-title'>{char.name}</h2>
-              <p>{char.gender}</p>
+		<article className="space-y-20 w-full">
+			<ul className="w-full grid grid-cols-[repeat(auto-fit,minmax(min(100%,30ch),1fr))] gap-6 list-none">
+				{chars?.map(char => (
+					<li key={char.id} className={clsx('w-full card card-bordered shadow-xl')}>
+						<div className="card-body">
+							<h2 className="card-title">{char.name}</h2>
+							<p>{char.gender}</p>
 
-              <div className='card-actions'>
-                <Link href={`/characters/${char.id}`} className='btn'>
-                  Details
-                </Link>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+							<div className="card-actions">
+								<Link href={`/characters/${char.id}`} className="btn">
+									Details
+								</Link>
+							</div>
+						</div>
+					</li>
+				))}
+			</ul>
 
-      <Pagination
+			{/* <Pagination
         page={page}
         next={() => setPage(c => (info && info.pages > page ? c + 1 : c))}
         prev={page > 1 ? () => setPage(c => c - 1) : null}
-      />
-    </article>
-  )
+      /> */}
+		</article>
+	)
 }

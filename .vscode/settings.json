@@ -3,5 +3,23 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.detectIndentation": false,
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.useTabStops": true,
+    "typescript.preferences.jsxAttributeCompletionStyle": "auto",
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
+  },
+  "[typescript]": {
+    "editor.semanticHighlighting.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.pinnedTabSizing": "normal",
+  "workbench.editor.showIcons": true,
+  "workbench.editor.showTabs": true
 }
